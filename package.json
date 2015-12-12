@@ -8,6 +8,7 @@
     "babel-core": "5.8.34",
     "bluebird": "3.0.6",
     "classnames": "2.2.1",
+    "dompurify": "^0.7.3",
     "eventemitter3": "1.1.1",
     "express": "4.13.3",
     "fastclick": "1.0.6",

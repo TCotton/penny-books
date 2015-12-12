@@ -29,9 +29,15 @@ class Html extends Component {
     });
   }
 
+  typekitCode() {
+    return ({ __html:
+      `try {Typekit.load({async: true});} catch (e) {}`
+    });
+  }
+
   render() {
     return (
-      <html className="no-js" lang="">
+      <html className="no-js" lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -40,6 +46,8 @@ class Html extends Component {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         <style id="css" dangerouslySetInnerHTML={{ __html: this.props.css }} />
+        <script src="https://use.typekit.net/pam8hwc.js"></script>
+        <script dangerouslySetInnerHTML={this.typekitCode()} />
       </head>
       <body>
         <div id="app" dangerouslySetInnerHTML={{ __html: this.props.body }} />

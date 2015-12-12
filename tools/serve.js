@@ -21,7 +21,7 @@ function serve() {
         'node',
         [path.join(__dirname, '../build/server.js')],
         {
-          env: Object.assign({ NODE_ENV: 'development' }, process.env),
+          env: Object.assign({NODE_ENV: 'development'}, process.env),
           silent: false,
         }
       );
@@ -36,6 +36,7 @@ function serve() {
       });
       server.stderr.on('data', data => process.stderr.write(data));
       server.on('error', err => reject(err));
+      process.setMaxListeners(20);
       process.on('exit', () => server.kill('SIGTERM'));
       return server;
     }
