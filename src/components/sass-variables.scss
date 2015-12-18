@@ -4,12 +4,13 @@
 $grey: #ccc;
 $blue: #00f;
 $black: #000;
+$darker: #999;
 $white:  #fff;
 $yellow: #ff0;
 $background: #d6d6d6;
 $dark: #ea5385;
 $alt_background: #f9f1da;
-$text: darken(#999, 10%);
+$text: darken($darker, 10%);
 
 /* css body settings */
 $baseLineHeight: 2.5;
@@ -21,8 +22,8 @@ $media_breakpoint_tablet: 979px;
 $media_breakpoint_mobile: 767px;
 
 /* images */
-$background_image: url('../img/main-background.png');
-$paper_background: url('../img/book-paper.png');
+$background_image: url('./main-background.png');
+$paper_background: url('./book-paper.png');
 
 /* font families */
 $font_family_one: unquote("'grafolita-script', sans-serif");

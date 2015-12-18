@@ -30,6 +30,10 @@ const GLOBALS = {
   __DEV__: DEBUG,
 };
 
+let sassParams = [
+  'outputStyle=expanded',
+];
+
 //
 // Common configuration chunk to be used for both
 // client-side (app.js) and server-side (server.js) bundles
@@ -80,6 +84,7 @@ const config = {
           'css-loader?' + (DEBUG ? 'sourceMap&' : 'minimize&') +
           'modules&localIdentName=[name]_[local]_[hash:base64:3]',
           'postcss-loader',
+          'sass-loader?' + sassParams.join('&'),
         ],
       }, {
         test: /\.json$/,
@@ -99,9 +104,9 @@ const config = {
 
   postcss: function plugins(bundler) {
     return [
-      require('postcss-import')({ addDependencyTo: bundler }),
-      require('precss')(),
-      require('autoprefixer')({ browsers: AUTOPREFIXER_BROWSERS }),
+      require('postcss-import')({addDependencyTo: bundler}),
+      // require('precss')(),
+      require('autoprefixer')({browsers: AUTOPREFIXER_BROWSERS}),
     ];
   },
 };
@@ -186,9 +191,7 @@ const serverConfig = merge({}, config, {
     /^\.\/assets\.json$/,
     function filter(context, request, cb) {
       const isExternal =
-        request.match(/^[@a-z][a-z\/\.\-0-9]*$/i) &&
-        !request.match(/^react-routing/) &&
-        !context.match(/[\\/]react-routing/);
+        request.match(/^[@a-z][a-z\/\.\-0-9]*$/i) && !request.match(/^react-routing/) && !context.match(/[\\/]react-routing/);
       cb(null, Boolean(isExternal));
     },
   ],
@@ -204,7 +207,7 @@ const serverConfig = merge({}, config, {
   plugins: [
     new webpack.DefinePlugin(GLOBALS),
     new webpack.BannerPlugin('require("source-map-support").install();',
-      { raw: true, entryOnly: false }),
+      {raw: true, entryOnly: false}),
   ],
 });
 
