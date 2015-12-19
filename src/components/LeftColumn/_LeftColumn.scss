@@ -1,0 +1,10 @@
+@import '../../../node_modules/susy/sass/susy';
+@import '../susy_grid';
+
+.left-column {
+  @include span(3);
+}
+
+.left-column--icon {
+  object-fit: contain;
+}

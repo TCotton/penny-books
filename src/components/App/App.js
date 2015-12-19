@@ -6,6 +6,7 @@ import s from './App.scss';
 import Header from '../Header';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
+import classNames from 'classnames';
 
 class App extends Component {
 
@@ -47,7 +48,7 @@ class App extends Component {
 
   render() {
     return !this.props.error ? (
-      <div>
+      <div className={classNames(s.wrapper, 'clearfix')}>
         <Header />
         {this.props.children}
         <Feedback />

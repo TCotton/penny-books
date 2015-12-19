@@ -1,0 +1,6 @@
+{
+  "name": "LeftColumn",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./LeftColumn.js"
+}
