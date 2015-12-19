@@ -7,6 +7,8 @@ import Header from '../Header';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
 import classNames from 'classnames';
+import LeftColumn from '../LeftColumn';
+import RightColumn from '../RightColumn';
 
 class App extends Component {
 
@@ -48,11 +50,9 @@ class App extends Component {
 
   render() {
     return !this.props.error ? (
-      <div className={classNames(s.wrapper, 'clearfix')}>
-        <Header />
-        {this.props.children}
-        <Feedback />
-        <Footer />
+      <div className={s.wrapper}>
+        <LeftColumn />
+        <RightColumn />
       </div>
     ) : this.props.children;
   }

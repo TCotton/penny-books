@@ -1,5 +1,6 @@
 @import '../variables';
 @import '../sass-variables';
+@import '../universal_classes';
 @import '../reset';
 @import '../mixins';
 @import '../../../node_modules/susy/sass/susy';
@@ -27,7 +28,8 @@ body {
   background-image: $background_image;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain;
+  background-color: #ccc;
+  // background-size: contain;
   min-height: 970px;
   margin-top: 20px;
 }
@@ -48,6 +50,10 @@ body {
   }
 
 }
+
+.AppClearfix {
+  @extend %clearfix;
+}
 /*
  * Browser upgrade prompt
  * ========================================================================== */
@@ -56,5 +62,5 @@ body {
   margin: .2em 0;
   background: #ccc;
   color: #000;
-  padding: 0.2em 0;
+  padding: .2em 0;
 }

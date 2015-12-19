@@ -609,37 +609,3 @@ a:active {
 ul {
   list-style: none;
 }
-
-/* selected link */
-
-.hide {
-  display: none;
-}
-
-/*
-* Hide only visually, but have it available for screenreaders: h5bp.com/v
-*/
-
-.visuallyhidden {
-  border: none;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-/* clearfix */
-.clearfix::before,
-.clearfix::after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-
-.clearfix::after {
-  clear: both;
-}
