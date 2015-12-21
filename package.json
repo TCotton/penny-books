@@ -47,6 +47,7 @@
     "jscs": "^2.6.0",
     "lodash.merge": "^3.3.2",
     "mkdirp": "^0.5.1",
+    "modernizr": "^3.2.0",
     "ncp": "^2.0.0",
     "node-sass": "^3.4.2",
     "postcss": "^5.0.12",
@@ -84,6 +85,7 @@
     "build": "babel-node tools/run build",
     "deploy": "babel-node tools/run deploy",
     "serve": "babel-node tools/run serve",
-    "start": "babel-node tools/run start"
+    "start": "babel-node tools/run start",
+    "modernizr": "modernizr -c modernizr-config.json -d ./tools/lib/modernizrBuild.js"
   }
 }

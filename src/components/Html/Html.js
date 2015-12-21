@@ -48,6 +48,7 @@ class Html extends Component {
         <style id="css" dangerouslySetInnerHTML={{ __html: this.props.css }} />
         <script src="https://use.typekit.net/pam8hwc.js"></script>
         <script dangerouslySetInnerHTML={this.typekitCode()} />
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
       </head>
       <body>
         <div id="app" dangerouslySetInnerHTML={{ __html: this.props.body }} />

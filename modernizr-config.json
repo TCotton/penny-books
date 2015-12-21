@@ -1,0 +1,21 @@
+{
+  "minify": false,
+  "options": [
+    "domPrefixes",
+    "prefixes",
+    "addTest",
+    "atRule",
+    "hasEvent",
+    "mq",
+    "prefixed",
+    "prefixedCSS",
+    "prefixedCSSValue",
+    "testAllProps",
+    "testProp",
+    "testStyles",
+    "setClasses"
+  ],
+  "feature-detects": [
+
+  ]
+}
